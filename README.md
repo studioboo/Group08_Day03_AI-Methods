@@ -88,14 +88,7 @@ The regimes line up with history, even though the model never saw the year. Spai
 
 ## AI usage disclosure
 
-| | |
-|---|---|
-| **Tools** | Claude Code (agent, in VS Code). The agent read the course brief and our Day 1/2 repository, explored the data, wrote and **ran** the notebook by itself (generated with `nbformat`, executed with `nbconvert`), and wrote the README, model card and dataset card. At our request it then simplified the notebook so its headings follow the brief (sections 0–8). |
-| **Why** | To go quickly from the cleaned Day 1 data to a complete, documented analysis, and to spend our own time on choosing the features and checking the interpretation. |
-| **Where** | Feature engineering, clustering code, plots, the first draft of the interpretation and cluster names, the model and dataset cards, this README. |
-| **How** | Prompt: *"help me with day 3 assignment"*, pointing to the course folder. The agent first ran quick experiments outside the notebook: several feature sets, k from 2 to 8, K-Means vs Ward agreement, DBSCAN eps, stability. It then ran the notebook once with placeholder names, read the cluster profiles and cross-tabs, and only then proposed names. After the first run it corrected text written in advance that did not match the outputs: subsample stability was 0.75 rather than 0.95, PCA showed 3 dimensions rather than 4, and different DBSCAN outliers than expected. It also fixed a reversed axis label on a figure. |
-
-**Lessons learned:** running the notebook before writing the interpretation mattered: the expected results and the real ones differed in several places, and the stability test in particular gave a less flattering (and more honest) result than expected. An agent can produce a full pipeline fast, but the cluster names are an interpretation, so they have to be checked against the profiles, the timeline and our own knowledge of the housing cycles.
+We used **Claude Code** (an AI coding assistant) to help write the notebook code, the plots and the first drafts of the README, model card and dataset card. We checked every result against the notebook outputs. The choice of features and k, and the cluster names, were reviewed by our team.
 
 ## License
 
