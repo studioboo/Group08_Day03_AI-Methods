@@ -1,0 +1,20 @@
+# virtual environments
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# data: not committed, except the small cleaned Day 1 dataset the notebook starts from
+data/*
+!data/.gitkeep
+!data/housing_affordability_model_ready.csv
+
+# fitted model and published data: on Hugging Face, not on GitHub
+models/*.joblib
+dataset/*.csv
+test_download/
+
+# OS files
+.DS_Store
+Thumbs.db

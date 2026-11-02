@@ -1,0 +1,11 @@
+# Python 3.14 (tested with 3.14.6)
+# scikit-learn is pinned exactly so that models/model.joblib loads
+scikit-learn==1.9.0
+pandas==3.0.3
+numpy==2.4.6
+scipy==1.18.0
+matplotlib==3.11.0
+seaborn==0.13.2
+joblib==1.5.3
+huggingface_hub==2.3.0
+ipykernel
